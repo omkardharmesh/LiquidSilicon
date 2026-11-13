@@ -1,0 +1,8 @@
+LiquidGlass
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The backdrop capture approach (recording a source GraphicsLayer and redrawing it under
+a glass surface) is derived from Kyant's "Backdrop" / AndroidLiquidGlass project
+(https://github.com/Kyant0/AndroidLiquidGlass), Copyright 2025 Kyant, Apache License 2.0.
+The rendering pipeline, shaders, shapes, container merging, interaction and adaptive
+luminance were rewritten for this project.
