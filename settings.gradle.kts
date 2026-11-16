@@ -26,8 +26,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LiquidGlass"
+rootProject.name = "LiquidSilicon"
 
-include(":liquidglass")
+include(":liquidsilicon")
 include(":sample")
 include(":androidApp")

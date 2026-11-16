@@ -1,6 +1,16 @@
-# LiquidGlass
+# LiquidSilicon
 
 iOS 26–style Liquid Glass for Compose Multiplatform (Android, iOS, desktop).
+
+## Install
+
+Not published yet. Once it is:
+
+```kotlin
+implementation("io.github.omkardharmesh:liquidsilicon:0.1.0")
+```
+
+Everything lives in the `io.github.omkardharmesh.liquidsilicon` package.
 
 ## Quick start
 
@@ -68,9 +78,20 @@ device tilt by default; pass `tiltLight = false` to disable).
 | Android 12 (API 31–32) | Blurred + saturated backdrop clipped to shape, gradient rim, no refraction |
 | Android 7–11 (API 24–30) | Translucent adaptive fill + gradient rim |
 
+## Demo app
+
+Four tabs, all sharing one floating `GlassTabBar` (press and drag it to lift the selection into a lens):
+
+- Home: streaming home page. Glass top bar, and glass Play / My List buttons that refract the hero as it scrolls.
+- Shorts: vertical pager with a glass For You / Following switch, a glass caption card, and an action column
+  in a `GlassContainer`. Tapping Share makes new buttons melt out of it.
+- Lab: a draggable lens over text, a grid or a live scene, with live sliders for blur, bend, edge, prism,
+  vibrance and tint, plus style and shape presets.
+- About: device, renderer tier and FPS, a tilt-light switch, and feature cards.
+
 ## Performance
 
-moto g85 (Snapdragon 695), R8 release build, scrolling the sample:
+moto g85 (Snapdragon 695), R8 release build, scrolling the earlier single-screen sample at 60 Hz:
 
 | | median frame | p90 | janky |
 |---|---|---|---|
@@ -79,13 +100,29 @@ moto g85 (Snapdragon 695), R8 release build, scrolling the sample:
 
 `scripts/bench.sh` reproduces the scroll benchmark on a connected device.
 
+The four-tab demo on the same phone, scrolling or swiping at 120 Hz (R8 release build): Home 115 fps, Shorts 100 fps,
+Lab 119 fps, About 86 fps. About is the heaviest screen, with five large glass cards over an animated background.
+Every tab holds 58–60 fps at 60 Hz.
+
 ## Build
 
 ```bash
-./gradlew :liquidglass:publishToMavenLocal
+./gradlew :liquidsilicon:publishToMavenLocal
 ./gradlew :androidApp:installRelease        # demo
 ./gradlew :sample:run                       # desktop demo
 ./gradlew :sample:desktopTest               # renders PNGs to sample/build/screenshots
+```
+
+## Signing
+
+`:androidApp` release builds are signed from `keystore.properties` in the repo root (gitignored), falling back
+to `liquidsilicon.signing.*` Gradle properties, then to the debug key:
+
+```
+storeFile=/absolute/path/to/release.jks
+storePassword=...
+keyAlias=...
+keyPassword=...
 ```
 
 ## Publishing
@@ -93,10 +130,10 @@ moto g85 (Snapdragon 695), R8 release build, scrolling the sample:
 Set in `~/.gradle/gradle.properties`:
 
 ```
-liquidglass.repoUrl=https://maven.pkg.github.com/<user>/<repo>
-liquidglass.repoUser=<github user>
-liquidglass.repoToken=<token with write:packages>
+liquidsilicon.repoUrl=https://maven.pkg.github.com/<user>/<repo>
+liquidsilicon.repoUser=<github user>
+liquidsilicon.repoToken=<token with write:packages>
 ```
 
-Then `./gradlew :liquidglass:publishAllPublicationsToRemoteRepository`. Change `GROUP` / `VERSION_NAME` in
+Then `./gradlew :liquidsilicon:publishAllPublicationsToRemoteRepository`. Change `GROUP` / `VERSION_NAME` in
 `gradle.properties` as needed.

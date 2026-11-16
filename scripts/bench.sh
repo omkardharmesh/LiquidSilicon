@@ -2,7 +2,7 @@
 # Usage: ANDROID_SERIAL=<device> scripts/bench.sh [label]
 set -e
 A=${ADB:-$HOME/Library/Android/sdk/platform-tools/adb}
-PKG=com.liquidglass.demo
+PKG=io.github.omkardharmesh.liquidsilicon.demo
 $A shell am force-stop $PKG
 $A shell am start -n $PKG/.MainActivity ${=EXTRAS} >/dev/null
 sleep 5

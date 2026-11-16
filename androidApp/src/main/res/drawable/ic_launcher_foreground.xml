@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:pathData="M23,64 A27,27 0 1,1 77,64 A27,27 0 1,1 23,64 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="50"
+                android:centerY="64"
+                android:gradientRadius="27">
+                <item android:offset="0" android:color="#52000000" />
+                <item android:offset="0.72" android:color="#1F000000" />
+                <item android:offset="1" android:color="#00000000" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M69.59,54.88 A21,21 0 1,1 54.09,38.63 A6,6 0 0,0 61.15,34.94 A10,10 0 1,1 73.61,48 A6,6 0 0,0 69.59,54.88 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="34"
+                android:startY="40"
+                android:endX="66"
+                android:endY="78">
+                <item android:offset="0" android:color="#FFFF6FA0" />
+                <item android:offset="0.5" android:color="#FFC86CF5" />
+                <item android:offset="1" android:color="#FF7F86FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M69.59,54.88 A21,21 0 1,1 54.09,38.63 A6,6 0 0,0 61.15,34.94 A10,10 0 1,1 73.61,48 A6,6 0 0,0 69.59,54.88 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="64"
+                android:centerY="44"
+                android:gradientRadius="16">
+                <item android:offset="0" android:color="#8CFFC27A" />
+                <item android:offset="1" android:color="#00FFC27A" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M69.59,54.88 A21,21 0 1,1 54.09,38.63 A6,6 0 0,0 61.15,34.94 A10,10 0 1,1 73.61,48 A6,6 0 0,0 69.59,54.88 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="32"
+                android:startY="36"
+                android:endX="68"
+                android:endY="80">
+                <item android:offset="0" android:color="#80FFFFFF" />
+                <item android:offset="0.5" android:color="#1FFFFFFF" />
+                <item android:offset="1" android:color="#47FFFFFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M69.59,54.88 A21,21 0 1,1 54.09,38.63 A6,6 0 0,0 61.15,34.94 A10,10 0 1,1 73.61,48 A6,6 0 0,0 69.59,54.88 Z"
+        android:strokeWidth="1.5">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="30"
+                android:startY="34"
+                android:endX="72"
+                android:endY="80">
+                <item android:offset="0" android:color="#FFFFFFFF" />
+                <item android:offset="0.5" android:color="#4DFFFFFF" />
+                <item android:offset="1" android:color="#D9FFFFFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M67.45,64.99 A19.4,19.4 0 0,1 48.32,78.39"
+        android:strokeWidth="0.9"
+        android:strokeColor="#B364D2FF"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M32.57,55.51 A16.8,16.8 0 0,1 43.81,43.02"
+        android:strokeWidth="2.8"
+        android:strokeColor="#F2FFFFFF"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M63.73,36.04 A7.2,7.2 0 0,1 68.04,31.73"
+        android:strokeWidth="2"
+        android:strokeColor="#E6FFFFFF"
+        android:strokeLineCap="round" />
+</vector>

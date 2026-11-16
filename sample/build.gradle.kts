@@ -9,7 +9,7 @@ plugins {
 
 kotlin {
     android {
-        namespace = "com.liquidglass.sample"
+        namespace = "io.github.omkardharmesh.liquidsilicon.sample"
         minSdk = 24
         compileSdk = 37
         compilerOptions {
@@ -21,14 +21,14 @@ kotlin {
 
     listOf(iosArm64(), iosSimulatorArm64()).forEach { target ->
         target.binaries.framework {
-            baseName = "LiquidGlassSample"
+            baseName = "LiquidSiliconSample"
             isStatic = true
         }
     }
 
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":liquidglass"))
+            implementation(project(":liquidsilicon"))
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.ui)
@@ -50,7 +50,7 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "com.liquidglass.sample.MainKt"
+        mainClass = "io.github.omkardharmesh.liquidsilicon.sample.MainKt"
     }
 }
 
